@@ -3,7 +3,7 @@ function() {
   var app = $$(f).app;
   var name = $("input[name=name]", f).val();
   var doc = {
-    id : "toast.channel:"+name,
+    id : "toast.channel:" + name,
     channel : name,
     desc : $("input[name=desc]", f).val(),
     type : "channel",
@@ -12,7 +12,7 @@ function() {
   app.db.saveDoc(doc, {
     success : function() {
       $("#chat").trigger("join", [{channel:name}]);
-      $("#channels").trigger("all");
+      $("#channels").trigger("all_channels");
     }
   })
   return false;

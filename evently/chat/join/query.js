@@ -1,6 +1,6 @@
 function(e, p) {
   return {
-    view : "channels",
+    view : "all_channels",
     key : p.channel
   };
 };
